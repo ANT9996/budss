@@ -1,0 +1,183 @@
+@media ( max-width: 1439px ) {
+  .awareness__socials_container {
+    flex-wrap: wrap;
+  }
+}
+
+@media ( max-width: 1365px ) {
+  .about {
+    background: none;
+  }
+
+  .about__list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+
+  .about__item {
+    width: auto;
+    padding-right: initial;
+  }
+
+  .footer__contact {
+    margin-right: initial;
+  }
+}
+
+@media ( max-width: 1199px ) {
+  .about__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .why__item:nth-child(1n) {
+    width: 100%;
+  }
+
+  .logos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer__top {
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+}
+
+@media ( max-width: 991px ) {
+  .offset {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .hero {
+    padding-bottom: 120%;
+  }
+
+  .hero__head {
+    width: auto;
+  }
+
+  .head-main {
+    font-size: 52px;
+  }
+
+  .head-second {
+    font-size: 42px;
+  }
+  
+  .head-third {
+    font-size: 38px;
+  }
+
+  .hero__text {
+    width: auto;
+    font-size: 16px;
+  }
+
+  .hero__container {
+    padding-left: 32px;
+  }
+
+  .hero__content {
+    padding: 0;
+  }
+
+  .about__list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .statistics__list {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .statistics__item {
+    display: flex;
+    gap: 20px;
+  }
+
+  .statistics__head {
+    margin-bottom: initial;
+  }
+
+  .why {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .why__head {
+    width: auto;
+  }
+
+  .why__item {
+    background-position: bottom left;
+  }
+
+  .why__item:nth-child(1n) .why__container {
+    padding: 20px 20px 100%;
+  }
+
+  .awareness__contact {
+    padding: 40px 20px;
+    margin-left: 32px;
+    margin-right: 32px;
+  }
+
+  .awareness__contact_head {
+    text-align: center;
+  }
+
+  .awareness__socials {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .awareness__icon {
+    width: 72px;
+    height: 72px;
+  }
+
+  .awareness__icon:nth-child(2n) {
+    margin-top: 73px;
+  }
+
+  .logos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px 19px;
+  }
+
+  .logos__item img {
+    height: 40px;
+  }
+  
+  .logos__item:nth-child(2) {
+    order: -1;
+  }
+
+  .logos__item:nth-child(3) {
+    order: -2;
+  }
+
+  .footer__top {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .footer__menu {
+    flex-direction: column;
+  }
+
+  .footer__buttons {
+    flex-direction: column;
+  }
+
+  .footer__privacy {
+    display: none;
+  }
+}
+
+@media ( max-width: 479px ) {
+
+}
