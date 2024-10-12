@@ -17,18 +17,36 @@
 </head>
 <body>
   <header class="header">
-    <div class="header__top">
+    <nav class="header__top">
       <ul class="header__list container m_auto offset">
         <li class="header__item header__item-active">For Business</li>
         <li class="header__item">For Customers</li>
       </ul>
-    </div>
+    </nav>
     <div class="header__bottom container m_auto offset">
       <div class="header__logo logo">
         <img src="./media/svg/logo.svg" alt="logo">
         <span>budss</span>
       </div>
-      <button class="contact_button">Contact sales</button>
+      <button class="header__contact contact_button">Contact sales</button>
+      <div class="header__burger burger">
+        <button class="burger__show">
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+        </button>
+        <div class="burger__content">
+          <button class="burger__close"></button>
+          <button class="burger__contact contact_button">Contact sales</button>
+          <ul class="footer__menu footer__menu-mobile">
+            <li class="footer__item">For Business</li>
+            <li class="footer__item">For Customers</li>
+            <li class="footer__item">Privacy Policy</li>
+            <li class="footer__item">Terms Of Use - Seller</li>
+            <li class="footer__item">Terms of Use - Sellers & Customers</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -41,9 +59,18 @@
           <button class="contact_button">Contact sales</button>
         </div>
       </div>
-      <!-- <div class="hero__media">
-        <img src="./media/png/hero_media.png"" alt="hero_media">
-      </div> -->
+      
+      <div class="hero__media">
+        <picture>
+          <source
+            srcset="
+              ./media/png/hero_media.png    1x,
+              ./media/png/hero_media@2.png 2x
+            "
+          >
+          <img src="./media/png/hero_media.png" alt="hero_media">
+        </picture>
+      </div>
     </section>
   
     <section class="about">
@@ -208,6 +235,13 @@
         <img src="./media/svg/logo.svg" alt="logo">
         <span>budss</span>
       </div>
+      <ul class="footer__menu footer__menu-mobile">
+        <li class="footer__item">For Business</li>
+        <li class="footer__item">For Customers</li>
+        <li class="footer__item">Privacy Policy</li>
+        <li class="footer__item">Terms Of Use - Seller</li>
+        <li class="footer__item">Terms of Use - Sellers & Customers</li>
+      </ul>
       <ul class="footer__menu">
         <li class="footer__item">For Business</li>
         <li class="footer__item">For Customers</li>

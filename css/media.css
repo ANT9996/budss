@@ -2,16 +2,26 @@
   .awareness__socials_container {
     flex-wrap: wrap;
   }
+  .hero {
+    overflow: hidden;
+  }
+
+  .about__content {
+    gap: 70px;
+  }
+
+  .about__list {
+    gap: 32px;
+  }
 }
 
 @media ( max-width: 1365px ) {
   .about {
-    background: none;
+    /* background: none; */
   }
 
   .about__list {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .about__item {
@@ -42,20 +52,32 @@
     flex-wrap: wrap;
     gap: 32px;
   }
+
+
 }
 
 @media ( max-width: 991px ) {
+  .header__contact {
+    display: none;
+  }
+
+  .header__burger {
+    display: block;
+  }
+
   .offset {
     padding-left: 32px;
     padding-right: 32px;
   }
 
   .hero {
-    padding-bottom: 120%;
+    /* padding-bottom: 120%; */
+    min-height: 350px;
+    background-size: 40%;
   }
 
   .hero__head {
-    width: auto;
+    /* width: auto; */
   }
 
   .head-main {
@@ -71,7 +93,7 @@
   }
 
   .hero__text {
-    width: auto;
+    /* width: auto; */
     font-size: 16px;
   }
 
@@ -81,6 +103,14 @@
 
   .hero__content {
     padding: 0;
+  }
+
+  .about {
+    background: none;
+  }
+
+  .about__content {
+    flex-direction: column;
   }
 
   .about__list {
@@ -111,11 +141,21 @@
   }
 
   .why__item {
+    background-image: url("../media/svg/why_1_m.svg");
     background-position: bottom left;
   }
 
+  .why__item:nth-child(2n) {
+    background-image: url("../media/svg/why_2_m.svg");
+  }
+
+  .why__item:nth-child(4n) {
+    background: #f5f5f5 url(../media/svg/why_4.svg) 92% bottom no-repeat;
+    background-size: 40%;
+  }
+
   .why__item:nth-child(1n) .why__container {
-    padding: 20px 20px 100%;
+    padding: 20px 20px 60%;
   }
 
   .awareness__contact {
@@ -166,7 +206,12 @@
   }
 
   .footer__menu {
-    flex-direction: column;
+    display: none;
+  }
+
+  .footer__menu-mobile {
+    display: flex;
+    gap: 16px;
   }
 
   .footer__buttons {
