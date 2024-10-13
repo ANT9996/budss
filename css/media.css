@@ -36,7 +36,7 @@
 
 @media ( max-width: 1199px ) {
   .about__list {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
 
   .why__item:nth-child(1n) {
@@ -53,6 +53,9 @@
     gap: 32px;
   }
 
+  .cookie__message {
+    flex-wrap: wrap;
+  }
 
 }
 
@@ -220,6 +223,23 @@
 
   .footer__privacy {
     display: none;
+  }
+
+  .cookie {
+    padding: 20px;
+  }
+
+  .cookie__message {
+    padding: 30px 20px;
+  }
+
+  .cookie__buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .cookie__button {
+    width: 100%;
   }
 }
 

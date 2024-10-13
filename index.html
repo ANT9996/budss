@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/media.css">
 
+  <script defer src="./js/index.js"></script>
+
   <title>BUDSS</title>
 
 </head>
@@ -19,16 +21,22 @@
   <header class="header">
     <nav class="header__top">
       <ul class="header__list container m_auto offset">
-        <li class="header__item header__item-active">For Business</li>
-        <li class="header__item">For Customers</li>
+        <li class="header__item">
+          <a class="header__link header__link-active" href="#">For Business</a>
+        </li>
+        <li class="header__item">
+          <a class="header__link" href="#">For Customers</a>
+        </li>
       </ul>
     </nav>
     <div class="header__bottom container m_auto offset">
-      <div class="header__logo logo">
-        <img src="./media/svg/logo.svg" alt="logo">
-        <span>budss</span>
-      </div>
-      <button class="header__contact contact_button">Contact sales</button>
+      <a href="#">
+        <div class="header__logo logo">
+          <img src="./media/svg/logo.svg" alt="logo">
+          <span>budss</span>
+        </div>
+      </a>
+      <button class="header__contact button button-dark_bg">Contact sales</button>
       <div class="header__burger burger">
         <button class="burger__show">
           <span class="burger__line"></span>
@@ -37,13 +45,23 @@
         </button>
         <div class="burger__content">
           <button class="burger__close"></button>
-          <button class="burger__contact contact_button">Contact sales</button>
+          <button class="burger__contact button">Contact sales</button>
           <ul class="footer__menu footer__menu-mobile">
-            <li class="footer__item">For Business</li>
-            <li class="footer__item">For Customers</li>
-            <li class="footer__item">Privacy Policy</li>
-            <li class="footer__item">Terms Of Use - Seller</li>
-            <li class="footer__item">Terms of Use - Sellers & Customers</li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">For Business</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">For Customers</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Privacy Policy</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Terms Of Use - Seller</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Terms of Use - Sellers & Customers</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -56,7 +74,7 @@
         <div class="hero__content offset m_auto">
           <h1 class="hero__head head head-main">Everyone is&nbsp;an&nbsp;Influencer</h1>
           <p class="hero__text">Budss is a payments as a service and WOM engine dedicated to acquisition and retention of customers to your business.</p>
-          <button class="contact_button">Contact sales</button>
+          <button class="button button-dark_bg">Contact sales</button>
         </div>
       </div>
       
@@ -194,7 +212,7 @@
       <div class="awareness_content container m_auto">
         <div class="awareness__contact">
           <h2 class="awareness__contact_head head head-second">Let  Your Business Grow</h2>
-          <button class="contact_button">Contact sales</button>
+          <button class="button">Contact sales</button>
         </div>
         <div class="awareness__socials_container offset">
           <div class="awareness__content">
@@ -231,28 +249,48 @@
 
   <footer class="footer container m_auto offset">
     <div class="footer__top">
-      <div class="footer__logo logo">
-        <img src="./media/svg/logo.svg" alt="logo">
-        <span>budss</span>
-      </div>
+      <a href="#">
+        <div class="footer__logo logo">
+          <img src="./media/svg/logo.svg" alt="logo">
+          <span>budss</span>
+        </div>
+      </a>
       <ul class="footer__menu footer__menu-mobile">
-        <li class="footer__item">For Business</li>
-        <li class="footer__item">For Customers</li>
-        <li class="footer__item">Privacy Policy</li>
-        <li class="footer__item">Terms Of Use - Seller</li>
-        <li class="footer__item">Terms of Use - Sellers & Customers</li>
+        <li class="footer__item">
+          <a class="footer__link" href="#">For Business</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="#">For Customers</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="#">Privacy Policy</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="#">Terms Of Use - Seller</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="#">Terms of Use - Sellers & Customers</a>
+        </li>
       </ul>
       <ul class="footer__menu">
-        <li class="footer__item">For Business</li>
-        <li class="footer__item">For Customers</li>
+        <li class="footer__item">
+          <a class="footer__link" href="#">For Business</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="#">For Customers</a>
+        </li>
       </ul>
       <div class="footer__buttons">
-        <button class="footer__contact contact_button">Contact sales</button>
+        <button class="footer__contact button button-dark_bg">Contact sales</button>
         <button class="download_button">
-          <img src="./media/png/appstore.png" alt="">
+          <a href="#">
+            <img src="./media/png/appstore.png" alt="">
+          </a>
         </button>
         <button class="download_button">
-          <img src="./media/png/googleplay.png" alt="">
+          <a href="#">
+            <img src="./media/png/googleplay.png" alt="">
+          </a>
         </button>
       </div>
     </div>
@@ -260,11 +298,32 @@
     <div class="footer__bottom">
       <div class="footer__copyright">© Copyright 2023, All Rights Reserved by Budss</div>
       <ul class="footer__privacy">
-        <li class="footer__privacy_item">Privacy Policy</li>
-        <li class="footer__privacy_item">Terms Of Use - Seller</li>
-        <li class="footer__privacy_item">Terms of Use - Sellers & Customers</li>
+        <li class="footer__privacy_item">
+          <a class="footer__link" href="#">Privacy Policy</a>
+        </li>
+        <li class="footer__privacy_item">
+          <a class="footer__link" href="#">Terms Of Use - Seller</a>
+        </li>
+        <li class="footer__privacy_item">
+          <a class="footer__link" href="#">Terms of Use - Sellers & Customers</a>
+        </li>
       </ul>
     </div>
   </footer>
+
+  <div id="cookieBlock" class="cookie">
+    <div class="cookie__message">
+      <button id="cookieCloseButton" class="cookie__close">
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4.99978 5L8.53531 8.53553M1.46424 8.53553L4.99978 5L1.46424 8.53553ZM8.53531 1.46447L4.99978 5L8.53531 1.46447ZM4.99978 5L1.46424 1.46447L4.99978 5Z" stroke="#B9B9B9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+      <p class="cookie__text">This website uses cookies to&nbsp;ensure you get the best experience on&nbsp;our website. They also allow&nbsp;us to&nbsp;analyze user behavior in&nbsp;order to&nbsp;constantly improve the website for you.</p>
+      <div class="cookie__buttons">
+        <button id="cookieAcceptButton" class="cookie__button button">Accept</button>
+        <button id="cookieDeclineButton" class="cookie__button button button-secondary">Decline</button>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
