@@ -100,10 +100,6 @@ body {
   background: none;
 }
 
-.flex {
-  display: flex;
-}
-
 .offset {
   padding-left: 60px;
   padding-right: 60px;
@@ -249,6 +245,11 @@ body {
   height: 24px;
   border: 0;
   background: none;
+  cursor: pointer;
+}
+
+.burger__show:hover .burger__line {
+  background: var(--color_grayscale_3);
 }
 
 .burger__show .burger__line {
@@ -256,6 +257,17 @@ body {
   height: 2px;
   border-radius: 8px;
   background: var(--color_grayscale_7);
+  transition: .2s background;
+}
+
+@keyframes show {
+  0% {
+    opacity: .9;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 .burger__content {
@@ -267,6 +279,10 @@ body {
   height: 100%;
   padding: 40% 16px 32px;
   background: var(--color_grayscale_1);
+  animation: show .2s linear;
+}
+
+.burger__content.burger__content-hide {
   display: none;
 }
 
@@ -278,6 +294,7 @@ body {
   height: 24px;
   background: none;
   border: 0;
+  cursor: pointer;
 }
 
 .burger__close::before {
@@ -297,8 +314,6 @@ body {
   background: var(--color_grayscale_7);
   transform: rotate(-45deg);
 }
-
-
 
 .burger__contact {
   width: 100%;
@@ -761,6 +776,20 @@ body {
   color: var(--color_grayscale_3);
 }
 
+.cross {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  right: 19px;
+  top: 19px;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  border: 0;
+}
+
 .cookie {
   position: fixed;
   width: 100%;
@@ -779,19 +808,7 @@ body {
   box-shadow: -10px -5px 30px 0 rgba(141, 141, 141, 0.1);
 }
 
-.cookie__close {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: none;
-  right: 19px;
-  top: 19px;
-  flex-shrink: 0;
-  width: 20px;
-  height: 20px;
-  border: 0;
-}
+
 
 .cookie__text {
   font-weight: 300;
@@ -807,4 +824,91 @@ body {
 
 .cookie__button {
   min-width: 128px;
+}
+
+.form {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #18181859;
+}
+
+.form__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  gap: 10px;
+  background: var(--color_grayscale_7);
+  border-radius: 20px;
+  width: 100%;
+  max-width: 417px;
+}
+
+.form__label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.form__span {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 157%;
+  color: #070707;
+}
+
+.form__span.form__span-required {
+  position: relative;
+}
+
+.form__span.form__span-required::after {
+  content: '*';
+  margin-left: 3px;
+  color: var(--color_additional_1);
+}
+
+.form__input {
+  padding: 10px 16px;
+  border: 1px solid #f1f1f1;
+  border-radius: 14px;
+  background: var(--color_grayscale_7);
+  color: #a7a7a7;
+}
+
+.form__input[type="number"]::-webkit-outer-spin-button,
+.form__input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.form__input[name="phone"] {
+  padding-left: 42px;
+  background: url("../media/svg/russian-federation.svg") 16px center no-repeat;
+}
+
+.form__text {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 140%;
+  color: var(--color_grayscale_0);
+  margin: 20px 0;
+}
+
+.form__text a {
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: var(--color_primary_1);
+}
+
+.form__button {
+  width: 50%;
+}
+
+.d-none {
+  display: none;
 }

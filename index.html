@@ -38,14 +38,14 @@
       </a>
       <button class="header__contact button button-dark_bg">Contact sales</button>
       <div class="header__burger burger">
-        <button class="burger__show">
+        <button id="burgerButton" class="burger__show">
           <span class="burger__line"></span>
           <span class="burger__line"></span>
           <span class="burger__line"></span>
         </button>
-        <div class="burger__content">
-          <button class="burger__close"></button>
-          <button class="burger__contact button">Contact sales</button>
+        <div id="burgerContent" class="burger__content burger__content-hide">
+          <button id="burgerCloseButton" class="burger__close"></button>
+          <button class="burger__contact button button-dark_bg">Contact sales</button>
           <ul class="footer__menu footer__menu-mobile">
             <li class="footer__item">
               <a class="footer__link" href="#">For Business</a>
@@ -313,7 +313,7 @@
 
   <div id="cookieBlock" class="cookie">
     <div class="cookie__message">
-      <button id="cookieCloseButton" class="cookie__close">
+      <button id="cookieCloseButton" class="cross">
         <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M4.99978 5L8.53531 8.53553M1.46424 8.53553L4.99978 5L1.46424 8.53553ZM8.53531 1.46447L4.99978 5L8.53531 1.46447ZM4.99978 5L1.46424 1.46447L4.99978 5Z" stroke="#B9B9B9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
@@ -324,6 +324,40 @@
         <button id="cookieDeclineButton" class="cookie__button button button-secondary">Decline</button>
       </div>
     </div>
+  </div>
+
+  <div id="formBlock" class="form">
+    <form id="form" class="form__container" action="#">
+      <button id="formCloseButton" class="cross">
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4.99978 5L8.53531 8.53553M1.46424 8.53553L4.99978 5L1.46424 8.53553ZM8.53531 1.46447L4.99978 5L8.53531 1.46447ZM4.99978 5L1.46424 1.46447L4.99978 5Z" stroke="#B9B9B9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+      <label class="form__label">
+        <span class="form__span form__span-required">Name</span>
+        <input id="name" class="form__input" type="text" name="name" placeholder="Enter name">
+      </label>
+      <label class="form__label">
+        <span class="form__span form__span-required">Email</span>
+        <input id="email" class="form__input" type="email" name="email" placeholder="Enter email">
+      </label>
+      <label class="form__label">
+        <span class="form__span form__span-required">Phone number</span>
+        <input id="phone" class="form__input" type="number" name="phone" placeholder="+ 7 900 000 00 00" maxlength="12" minlength="11" pattern="[0-9]">
+      </label>
+      <label class="form__label">
+        <span class="form__span">Company</span>
+        <input class="form__input" type="text" name="company" placeholder="Enter company">
+      </label>
+      <label class="form__label">
+        <span class="form__span">Website/Store URL</span>
+        <input class="form__input" type="text" name="company" placeholder="Enter Website/Store URL">
+      </label>
+      <p class="form__text">
+        By submitting this form you are agreeing to Budss’s <a href="#">Privacy Policy</a> and <a href="#">Terms of Use</a>
+      </p>
+      <button id="formSubmitButton" class="form__button button button-disabled">Contact sales</button>
+    </form>
   </div>
 </body>
 </html>
