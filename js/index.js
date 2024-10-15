@@ -36,6 +36,7 @@ const form = document.getElementById('form')
 const formBlock = document.getElementById('formBlock')
 const formCloseButton = document.getElementById('formCloseButton')
 const formSubmitButton = document.getElementById('formSubmitButton')
+const formError = document.getElementById('formError')
 
 const inputName = document.getElementById('name')
 const inputEmail = document.getElementById('email')
@@ -57,21 +58,24 @@ const checkValidation = () => {
   .forEach(element => {
     if (!isValid(element)) {
       formSubmitButton.classList.add('button-disabled')
+      element.parentElement.classList.add('form__label-error')
+      formError.classList.add('form__error-show')
       return
+    } else {
+      element.parentElement.classList.remove('form__label-error')
     }
+
   // проверка емейла на правильность
     const reg = new RegExp(/^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/);
     if (!reg.test(inputEmail.value)) {
       formSubmitButton.classList.add('button-disabled')
+      inputEmail.parentElement.classList.add('form__label-error')
       return
-    }
-
-    const regPhone = new RegExp(/^(\+)?((\d{2,3}) ?\d|\d)(([ -]?\d)|( ?(\d{2,3}) ?)){5,12}\d$/)
-    if (!regPhone.test(inputPhone.value)) {
-      formSubmitButton.classList.add('button-disabled')
-      return
+    } else {
+      inputEmail.parentElement.classList.remove('form__label-error')
     }
     
+    formError.classList.remove('form__error-show')
     formSubmitButton.classList.remove('button-disabled')
   });
 }

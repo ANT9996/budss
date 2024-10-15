@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet"> -->
 
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/style.css">
@@ -336,14 +336,17 @@
       <label class="form__label">
         <span class="form__span form__span-required">Name</span>
         <input id="name" class="form__input" type="text" name="name" placeholder="Enter name">
+        <span class="form__input_error">This field is required.</span>
       </label>
       <label class="form__label">
         <span class="form__span form__span-required">Email</span>
         <input id="email" class="form__input" type="email" name="email" placeholder="Enter email">
+        <span class="form__input_error">This field is required.</span>
       </label>
       <label class="form__label">
         <span class="form__span form__span-required">Phone number</span>
-        <input id="phone" class="form__input" type="number" name="phone" placeholder="+ 7 900 000 00 00" maxlength="12" minlength="11" pattern="[0-9]">
+        <input id="phone" class="form__input" type="number" name="phone" placeholder="+ 7 900 000 00 00" maxlength="12">
+        <span class="form__input_error">This field is required.</span>
       </label>
       <label class="form__label">
         <span class="form__span">Company</span>
@@ -353,6 +356,7 @@
         <span class="form__span">Website/Store URL</span>
         <input class="form__input" type="text" name="company" placeholder="Enter Website/Store URL">
       </label>
+      <span id="formError" class="form__error">Please fill in all required fields</span>
       <p class="form__text">
         By submitting this form you are agreeing to Budss’s <a href="#">Privacy Policy</a> and <a href="#">Terms of Use</a>
       </p>

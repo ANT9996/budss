@@ -1,0 +1,43 @@
+@font-face {
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src:
+    local('Outfit-Light'),
+    url('Outfit-Light.woff') format('woff'),
+    url('Outfit-Light.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src:
+    local('Outfit-Regular'),
+    url('Outfit-Regular.woff') format('woff'),
+    url('Outfit-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src:
+    local('Outfit-SemiBold'),
+    url('Outfit-SemiBold.woff') format('woff'),
+    url('Outfit-SemiBold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src:
+    local('Outfit-Bold'),
+    url('Outfit-Bold.woff') format('woff'),
+    url('Outfit-Bold.woff2') format('woff2');
+}
