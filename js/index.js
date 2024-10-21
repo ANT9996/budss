@@ -1,3 +1,4 @@
+
 // COOKIE BANNER
 const cookieCloseButton = document.getElementById('cookieCloseButton')
 const cookieAcceptButton = document.getElementById('cookieAcceptButton')
@@ -24,11 +25,11 @@ const burgerCloseButton = document.getElementById('burgerCloseButton')
 const burgerContent = document.getElementById('burgerContent')
 
 burgerButton.addEventListener('click', () => {
-  burgerContent.classList.toggle('burger__content-hide')
+  burgerContent.classList.toggle('burger__content--hide')
 })
 
 burgerCloseButton.addEventListener('click', () => {
-  burgerContent.classList.add('burger__content-hide')
+  burgerContent.classList.add('burger__content--hide')
 })
 
 // FORM
@@ -42,13 +43,28 @@ const inputName = document.getElementById('name')
 const inputEmail = document.getElementById('email')
 const inputPhone = document.getElementById('phone')
 
-/**
- * проверка длины инпута
- * @param {HTMLInputElement} element
- * @return {boolean} true = если ок
- */
+const openForm = () => {
+  formBlock.classList.remove('d-none')
+  burgerContent.classList.add('burger__content--hide')
+}
+
+formSubmitButton.addEventListener('click', () => {
+
+  inputName.value = ''
+  inputEmail.value = ''
+  inputPhone.value = ''
+  formSubmitButton.classList.add('button--disabled')
+
+  formBlock.classList.add('d-none')
+  thankBlock.classList.remove('d-none')
+})
+
+document.querySelectorAll('.formButton')
+.forEach((el) => el.addEventListener('click', openForm))
+
 
 const isValid = (element) => element.value.trim().length < 1 ? false : true;
+
 const checkValidation = () => {
   // проверка наличия всех элементов
   if (!inputName || !inputEmail || !inputPhone) return
@@ -57,26 +73,26 @@ const checkValidation = () => {
   [inputName, inputEmail, inputPhone]
   .forEach(element => {
     if (!isValid(element)) {
-      formSubmitButton.classList.add('button-disabled')
-      element.parentElement.classList.add('form__label-error')
-      formError.classList.add('form__error-show')
+      formSubmitButton.classList.add('button--disabled')
+      element.parentElement.classList.add('form__label--error')
+      formError.classList.add('form__error--show')
       return
     } else {
-      element.parentElement.classList.remove('form__label-error')
+      element.parentElement.classList.remove('form__label--error')
     }
 
   // проверка емейла на правильность
     const reg = new RegExp(/^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/);
     if (!reg.test(inputEmail.value)) {
       formSubmitButton.classList.add('button-disabled')
-      inputEmail.parentElement.classList.add('form__label-error')
+      inputEmail.parentElement.classList.add('form__label--error')
       return
     } else {
-      inputEmail.parentElement.classList.remove('form__label-error')
+      inputEmail.parentElement.classList.remove('form__label--error')
     }
     
-    formError.classList.remove('form__error-show')
-    formSubmitButton.classList.remove('button-disabled')
+    formError.classList.remove('form__error--show')
+    formSubmitButton.classList.remove('button--disabled')
   });
 }
 
@@ -93,3 +109,13 @@ form.addEventListener('submit', (e) => e.preventDefault())
 formCloseButton.addEventListener('click', () => {
   formBlock.classList.add('d-none')
 })
+
+// Благодарность
+
+const thankBlock = document.getElementById('thank')
+
+const thankCloseButton = document.getElementById('thankCloseButton')
+const thankButton = document.getElementById('thankButton')
+
+thankCloseButton.addEventListener('click', () => {thankBlock.classList.add('d-none')})
+thankButton.addEventListener('click', () => {thankBlock.classList.add('d-none')})
