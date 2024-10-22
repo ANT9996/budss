@@ -154,7 +154,7 @@
 
   .why__item:nth-child(4n) {
     background: #f5f5f5 url(../media/svg/why_4.svg) 92% bottom no-repeat;
-    background-size: 40%;
+    background-size: 19%;
   }
 
   .why__item:nth-child(1n) .why__container {
@@ -538,5 +538,63 @@
 
   .horizontal_line {
     margin: 34px 0 12px;
+  }
+
+  .cookie__message {
+    gap: 39px 120px;
+  }
+
+  .form {
+    padding: 20px;
+  }
+
+  .form__container {
+    padding: 20px 16px;
+  }
+  
+  .form__button {
+    width: 100%;
+  }
+
+  .form__cross {
+    top: 10px;
+  }
+
+  .form__error {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .form__input[name="phone"] {
+    padding-left: 47px;
+  }
+
+  .thank {
+    padding: 20px;
+  }
+
+  .thank__content {
+    padding: 40px 20px;
+  }
+
+  .thank__image {
+    width: 229px;
+  }
+
+  .thank__head {
+    font-size: 24px;
+    line-height: 120%;
+  }
+
+  .thank__text {
+    font-size: 20px;
+  }
+
+  .thank__button {
+    width: 255px;
+  }
+
+  .thank__cross {
+    right: 15px;
   }
 }

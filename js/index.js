@@ -97,13 +97,13 @@ const checkValidation = () => {
 }
 
 if (inputName)
-inputName.addEventListener('change', checkValidation)
+inputName.addEventListener('blur', checkValidation)
 
 if (inputEmail)
-inputEmail.addEventListener('input', checkValidation)
+inputEmail.addEventListener('blur', checkValidation)
 
 if (inputPhone)
-inputPhone.addEventListener('input', checkValidation)
+inputPhone.addEventListener('blur', checkValidation)
 
 form.addEventListener('submit', (e) => e.preventDefault())
 formCloseButton.addEventListener('click', () => {

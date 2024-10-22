@@ -28,6 +28,8 @@ body {
 }
 
 .button {
+  overflow: hidden;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -857,15 +859,16 @@ body {
   margin-bottom: 10px;
 }
 
-.form__label.form__label-error .form__input {
+.form__label.form__label--error .form__input {
   border: 1px solid #ec1211;
 }
 
-.form__label.form__label-error .form__input_error {
+.form__label.form__label--error .form__input_error {
   display: block;
 }
 
 .form__span {
+  width: max-content;
   font-weight: 500;
   font-size: 14px;
   line-height: 157%;
@@ -941,7 +944,7 @@ body {
   margin-top: 20px;
 }
 
-.form__error-show {
+.form__error--show {
   display: block;
 }
 
@@ -994,4 +997,22 @@ body {
 
 .d-none {
   display: none;
+}
+
+.button:before {
+	content:'';
+	position: absolute;
+	bottom: -100%;
+	left: -100%;
+	width: 0%;
+	height: 0%;
+	background: rgba(255,255,255,0.3);
+	border-radius: 5px;
+	transition: all 1s ease;
+  border-radius: 100%;
+}
+
+.button:hover:before {
+	height: 300%;
+  width: 300%;
 }
