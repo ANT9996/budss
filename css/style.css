@@ -47,11 +47,38 @@ body {
   outline: none;
   cursor: pointer;
 
-  transition: .2s background, .1s border, .2s color;
+  transition: .2s background, .1s border, .2s color, .5s transform;
+}
+
+.button > * {
+  z-index: 1;
 }
 
 .button:hover {
-  background: var(--color_grayscale_1);
+  transform: scale(1.1);
+  /* background: var(--color_grayscale_1); */
+}
+
+.button:before {
+	content:'';
+	position: absolute;
+	bottom: -100%;
+	left: -100%;
+	width: 0%;
+	height: 0%;
+	background: var(--color_grayscale_1);
+	border-radius: 5px;
+	transition: width .5s, height .5s, background .2s;
+  border-radius: 100%;
+}
+
+.button:hover:before {
+  width: 300%;
+	height: 300%;
+}
+
+.button:active:before {
+  background: var(--color_primary_0);
 }
 
 .button--dark_bg {
@@ -75,8 +102,13 @@ body {
 
 .button--secondary {
   color: var(--color_grayscale_7);
-  background: var(--color_grayscale_7);
+  /* background: var(--color_grayscale_7); */
+  background: none;
   border: 2px solid var(--color_primary_1);
+}
+
+.button--secondary:before {
+	background: var(--color_primary_4);
 }
 
 .button.button--secondary.cookie__button {
@@ -95,6 +127,10 @@ body {
 
 .button--secondary:active {
   border: 2px solid #a64ced;
+  background: none;
+}
+
+.button--secondary:active:before {
   background: none;
 }
 
@@ -798,6 +834,7 @@ body {
   width: 100%;
   bottom: 0;
   padding: 30px 65px 30px 90px;
+  z-index: 10;
 }
 
 .cookie__message {
@@ -839,6 +876,7 @@ body {
   justify-content: center;
   align-items: center;
   background: #18181859;
+  z-index: 10;
 }
 
 .form__container {
@@ -997,22 +1035,4 @@ body {
 
 .d-none {
   display: none;
-}
-
-.button:before {
-	content:'';
-	position: absolute;
-	bottom: -100%;
-	left: -100%;
-	width: 0%;
-	height: 0%;
-	background: rgba(255,255,255,0.3);
-	border-radius: 5px;
-	transition: all 1s ease;
-  border-radius: 100%;
-}
-
-.button:hover:before {
-	height: 300%;
-  width: 300%;
 }

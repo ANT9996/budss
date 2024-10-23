@@ -32,7 +32,7 @@
           <span class="logo__span">budss</span>
         </div>
       </a>
-      <button class="formButton header__contact button button--dark_bg">Contact sales</button>
+      <button class="formButton header__contact button button--dark_bg"><span>Contact sales</span></button>
       <div class="header__burger burger">
         <button id="burgerButton" class="burger__show">
           <span class="burger__line"></span>
@@ -41,7 +41,7 @@
         </button>
         <div id="burgerContent" class="burger__content burger__content--hide">
           <button id="burgerCloseButton" class="burger__close"></button>
-          <button class="formButton burger__contact button button--dark_bg">Contact sales</button>
+          <button class="formButton burger__contact button button--dark_bg"><span>Contact sales</span></button>
           <ul class="menu menu--mobile">
             <li class="menu__item">
               <a class="menu__link" href="#">For Business</a>
@@ -70,7 +70,7 @@
         <div class="hero__content offset m_auto">
           <h1 class="hero__head head head--main">Everyone is&nbsp;an&nbsp;Influencer</h1>
           <p class="hero__text">Budss is a payments as a service and WOM engine dedicated to acquisition and retention of customers to your business.</p>
-          <button class="formButton hero__button button button--dark_bg">Contact sales</button>
+          <button class="formButton hero__button button button--dark_bg"><span>Contact sales</span></button>
         </div>
       </div>
       
@@ -78,15 +78,15 @@
         <picture class="hero__picture">
           <source
             srcset="
-              ./media/png/hero_media_mobile.png 1x,
-              ./media/png/hero_media_mobile@2.png 2x
+              ./media/webp/hero_media_mobile.webp 1x,
+              ./media/webp/hero_media_mobile@2.webp 2x
             "
             media="(max-width: 479px)"
           >
           <source
             srcset="
-              ./media/png/hero_media.png 1x,
-              ./media/png/hero_media@2.png 2x
+              ./media/webp/hero_media.webp 1x,
+              ./media/webp/hero_media@2.webp 2x
             "
           >
           <img class="hero__media_img" src="./media/png/hero_media.png" alt="hero_media">
@@ -157,7 +157,10 @@
         </div>
       </div>
       <div class="works__image_block">
-        <img class="works__image" src="./media/png/phone.png" alt="">
+        <picture>
+          <source srcset="./media/webp/phone.webp">
+          <img class="works__image" src="./media/png/phone.png" alt="">
+        </picture>
       </div>
     </div>
   
@@ -215,7 +218,7 @@
       <div class="awareness_content container m_auto">
         <div class="awareness__contact">
           <h2 class="awareness__contact_head head head--second">Let  Your Business Grow</h2>
-          <button class="awareness__button formButton button">Contact sales</button>
+          <button class="awareness__button formButton button"><span>Contact sales</span></button>
         </div>
         <div class="awareness__socials_container offset">
           <div class="awareness__content">
@@ -232,31 +235,36 @@
         <ul class="awareness__logos logos container m_auto">
           <li class="logos__item">
             <picture class="logos__picture">
-              <source srcset="./media/png/woo_mobile.png" media="(max-width: 479px)" >
+              <source srcset="./media/webp/woo_mobile.webp" media="(max-width: 479px)">
+              <source srcset="./media/webp/woo.webp">
               <img class="logos__image" src="./media/png/woo.png" alt="woo">
             </picture>
           </li>
           <li class="logos__item">
             <picture class="logos__picture">
-              <source srcset="./media/png/shopify_mobile.png" media="(max-width: 479px)">
+              <source srcset="./media/webp/shopify_mobile.webp" media="(max-width: 479px)">
+              <source srcset="./media/webp/shopify.webp">
               <img class="logos__image" src="./media/png/shopify.png" alt="shopify">
             </picture>
           </li>
           <li class="logos__item">
             <picture class="logos__picture">
-              <source srcset="./media/png/square_mobile.png" media="(max-width: 479px)">
+              <source srcset="./media/webp/square_mobile.webp" media="(max-width: 479px)">
+              <source srcset="./media/webp/square.webp">
               <img class="logos__image" src="./media/png/square.png" alt="square">
             </picture>
           </li>
           <li class="logos__item">
             <picture class="logos__picture">
-              <source srcset="./media/png/squarespace_mobile.png" media="(max-width: 479px)">
+              <source srcset="./media/webp/squarespace_mobile.webp" media="(max-width: 479px)">
+              <source srcset="./media/webp/squarespace.webp">
               <img class="logos__image" src="./media/png/squarespace.png" alt="squarespace">
             </picture>
           </li>
           <li class="logos__item">
             <picture class="logos__picture">
-              <source srcset="./media/png/clover_mobile.png" media="(max-width: 479px)">
+              <source srcset="./media/webp/clover_mobile.webp" media="(max-width: 479px)">
+              <source srcset="./media/webp/clover.webp">
               <img class="logos__image" src="./media/png/clover.png" alt="clover">
             </picture>
           </li>
@@ -299,12 +307,18 @@
         </li>
       </ul>
       <div class="footer__buttons">
-        <button class="formButton footer__contact button button--dark_bg">Contact sales</button>
+        <button class="formButton footer__contact button button--dark_bg"><span>Contact sales</span></button>
         <a class="footer__app" href="#">
-          <img class="footer__image" src="./media/png/appstore.png" alt="">
+          <picture>
+            <source srcset="./media/webp/appstore.webp">
+            <img class="footer__image" src="./media/png/appstore.png" alt="">
+          </picture>
         </a>
         <a class="footer__app" href="#">
-          <img class="footer__image" src="./media/png/googleplay.png" alt="">
+          <picture>
+            <source srcset="./media/webp/googleplay.webp">
+            <img class="footer__image" src="./media/png/googleplay.png" alt="">
+          </picture>
         </a>
       </div>
     </div>
@@ -334,8 +348,8 @@
       </button>
       <p class="cookie__text">This website uses cookies to&nbsp;ensure you get the best experience on&nbsp;our website. They also allow&nbsp;us to&nbsp;analyze user behavior in&nbsp;order to&nbsp;constantly improve the website for you.</p>
       <div class="cookie__buttons">
-        <button id="cookieAcceptButton" class="cookie__button button">Accept</button>
-        <button id="cookieDeclineButton" class="cookie__button button button--secondary">Decline</button>
+        <button id="cookieAcceptButton" class="cookie__button button"><span>Accept</span></button>
+        <button id="cookieDeclineButton" class="cookie__button button button--secondary"><span>Decline</span></button>
       </div>
     </div>
   </div>
@@ -374,7 +388,7 @@
       <p class="form__text">
         By submitting this form you are agreeing to Budss’s <a class="form__link" href="#">Privacy Policy</a> and <a class="form__link" href="#">Terms of Use</a>
       </p>
-      <button id="formSubmitButton" class="form__button button button--disabled">Contact sales</button>
+      <button id="formSubmitButton" class="form__button button button--disabled"><span>Contact sales</span></button>
     </form>
   </div>
 
@@ -388,7 +402,7 @@
       <img class="thank__image" src="./media/svg/like.svg" alt="">
       <h4 class="thank__head head head--four">Thank you!</h4>
       <p class="thank__text">Thank you, we&nbsp;have received your application and will contact you soon!</p>
-      <button id="thankButton" class="thank__button button">Super!</button>
+      <button id="thankButton" class="thank__button button"><span>Super!</span></button>
     </div>
   </div>
 
