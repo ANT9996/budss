@@ -262,10 +262,6 @@ body {
   justify-content: space-between;
 }
 
-.header__contact {
-
-}
-
 .header__burger {
   display: none;
 }
@@ -723,10 +719,6 @@ body {
   gap: 90px;
 }
 
-.logos__item {
-
-}
-
 .footer {
   padding-top: 40px;
   padding-bottom: 21px;
@@ -1011,10 +1003,6 @@ body {
   padding: 40px;
   border-radius: 20px;
   background: #fff;
-}
-
-.thank__image {
-
 }
 
 .thank__head {
