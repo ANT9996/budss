@@ -43,7 +43,7 @@ body {
 
   font-weight: 600;
   font-size: 20px;
-  color: #fff;
+  color: var(--color_grayscale_7);
   outline: none;
   cursor: pointer;
 
@@ -937,7 +937,7 @@ body {
   font-weight: 400;
   font-size: 12px;
   line-height: 167%;
-  color: #ec1211;
+  color: var(--color_additional_2);
 }
 
 .form__input[type="number"]::-webkit-outer-spin-button,
@@ -972,7 +972,7 @@ body {
   display: none;
   font-weight: 400;
   font-size: 16px;
-  color: #ec1211;
+  color: var(--color_additional_2);
   margin-top: 20px;
 }
 
