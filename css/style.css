@@ -56,7 +56,6 @@ body {
 
 .button:hover {
   transform: scale(1.1);
-  /* background: var(--color_grayscale_1); */
 }
 
 .button:before {
@@ -102,7 +101,7 @@ body {
 
 .button--secondary {
   color: var(--color_grayscale_7);
-  /* background: var(--color_grayscale_7); */
+
   background: none;
   border: 2px solid var(--color_primary_1);
 }
@@ -360,10 +359,9 @@ body {
 }
 
 .hero {
-  /* padding-top: 13px; */
+  overflow: hidden;
   min-height: 520px;
   display: flex;
-  /* background: url("../media/png/hero_media.png") right bottom no-repeat; */
 }
 
 .hero__container {
@@ -376,12 +374,10 @@ body {
 }
 
 .hero__content {
-  /* width: 45%; */
   padding-left: 49px;
 }
 
 .hero__head {
-  /* width: 50%; */
   letter-spacing: .1px;
   margin-bottom: 18px;
 }
@@ -404,7 +400,6 @@ body {
 .about__head {
   display: block;
   margin: 0 auto 78px;
-  /* margin-bottom: 78px; */
 }
 
 .about__content {
@@ -490,7 +485,6 @@ body {
   overflow: hidden;
   width: 100%;
   display: flex;
-  /* grid-template-columns: repeat(2, 1fr); */
   font-weight: 700;
   font-size: 128px;
   line-height: 106%;
@@ -587,7 +581,6 @@ body {
   --width: 57%;
   overflow: hidden;
   min-height: 362px;
-  /* padding: 40px; */
   border-radius: 30px;
   background: var(--color_grayscale_6) url("../media/svg/why_1.svg") left center no-repeat;
   background-size: contain;
@@ -773,6 +766,14 @@ body {
   gap: 20px;
 }
 
+.footer__app {
+  transition: transform .2s;
+}
+
+.footer__app:hover {
+  transform: scale(1.05);
+}
+
 .footer__contact {
   margin-right: 20px;
 }
@@ -827,6 +828,7 @@ body {
   width: 20px;
   height: 20px;
   border: 0;
+  cursor: pointer;
 }
 
 .cookie {

@@ -17,7 +17,6 @@
 
 @media ( max-width: 1365px ) {
   .about {
-    /* background: none; */
   }
 
   .about__list {
@@ -74,13 +73,8 @@
   }
 
   .hero {
-    /* padding-bottom: 120%; */
     min-height: 350px;
     background-size: 40%;
-  }
-
-  .hero__head {
-    /* width: auto; */
   }
 
   .head--main {
@@ -96,7 +90,6 @@
   }
 
   .hero__text {
-    /* width: auto; */
     font-size: 16px;
   }
 
